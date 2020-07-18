@@ -2,7 +2,7 @@
   <div class="about">
     <h1>Lista de usuarios</h1>
     <div class="userCont">
-      <div class="userCard" v-for="user in users">
+      <div class="userCard" v-for="user in users" @click="renderUser(user.id)">
         <h2>{{user.name}}</h2>
       </div>
     </div>
@@ -15,6 +15,11 @@ export default {
   computed: {
     users () {
       return this.$store.state.users
+    }
+  },
+  methods: {
+    renderUser: function (id) {
+      window.location.href = `#/users/${id}`
     }
   },
 }

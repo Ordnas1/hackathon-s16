@@ -2,7 +2,7 @@
     <div>
         <h1>Posts</h1>
         <div class="postCont">
-            <div class="postCard" v-for="post in posts">
+            <div class="postCard" v-for="post in posts" @click="renderPost(post.id)">
                 {{ post.title }} 
             </div>
         </div>
@@ -14,6 +14,11 @@ export default {
     computed: {
         posts () {
             return this.$store.state.posts
+        }
+    },
+    methods: {
+        renderPost: function(id) {
+            window.location.href = `#/posts/${id}`
         }
     },
 }

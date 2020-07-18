@@ -27,6 +27,16 @@ Vue.use(VueRouter)
     path: '/albums',
     name: 'Albums',
     component: () => import(/* webpackChunkName: "about" */ '../views/Albums.vue')
+  },
+  {
+    path: '/users/:id',
+    name: "User",
+    component: () => import('../views/User.vue')
+  },
+  {
+    path: '/posts/:id',
+    name: "Post",
+    component: () => import('../views/Post.vue')
   }
 ]
 
