@@ -41,10 +41,11 @@ export default {
 <style scoped lang="scss">
     .info-cont {
         display: flex;
+        flex-wrap: wrap;
     }
 
     .contact, .company {
-        flex: 1;
+        flex: 1 1 300px;
         display: flex;
         flex-direction: column;
         align-items: center;
